@@ -2,11 +2,11 @@
 import requests
 from lxml import html
 
-USERNAME = "<USERNAME>"
-PASSWORD = "<PASSWORD>"
+USERNAME = os.environ['user']
+PASSWORD = os.environ['pass']
 
-LOGIN_URL = "https://bitbucket.org/account/signin/?next=/"
-URL = "https://bitbucket.org/dashboard/repositories"
+LOGIN_URL = "https://accounts.intuit.com/index.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event%3Futm_medium%3Ddirect%26cta%3Dnav_login_dropdown"
+URL = "https://mint.intuit.com/planning.event"
 
 def main():
     session_requests = requests.session()
